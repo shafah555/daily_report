@@ -255,12 +255,14 @@ class _LoginScreenState extends State<LoginScreen> {
       });
 
       // Navigate to user role selection
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const UserRoleScreen(),
-        ),
-      );
+      if (mounted) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const UserRoleScreen(),
+          ),
+        );
+      }
     }
   }
 

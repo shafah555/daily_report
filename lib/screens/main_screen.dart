@@ -22,11 +22,6 @@ class _MainScreenState extends State<MainScreen> {
     const ReminderScreen(),
   ];
 
-  final List<String> _titles = [
-    'Calendar',
-    'নামাজের সময়',
-    'Reminder',
-  ];
 
   @override
   Widget build(BuildContext context) {

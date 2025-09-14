@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/main_screen.dart';
 import 'screens/auth/login_screen.dart';
+import 'package:share_plus/share_plus.dart';
 
 void main() {
   runApp(const DailyActivityTrackerApp());

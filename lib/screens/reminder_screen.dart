@@ -607,16 +607,6 @@ class _ReminderScreenState extends State<ReminderScreen> {
     );
   }
 
-  tz.TZDateTime _nextInstanceOfTime(int hour, int minute) {
-    final now = tz.TZDateTime.now(tz.local);
-    var scheduledDate = tz.TZDateTime(tz.local, now.year, now.month, now.day, hour, minute);
-    
-    if (scheduledDate.isBefore(now)) {
-      scheduledDate = scheduledDate.add(const Duration(days: 1));
-    }
-    
-    return scheduledDate;
-  }
 
   @override
   void dispose() {

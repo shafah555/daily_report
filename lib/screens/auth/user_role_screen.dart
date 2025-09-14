@@ -199,12 +199,14 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
     
     if (role == 'Primary Member') {
       // Navigate to main screen for primary member
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const MainScreen(),
-        ),
-      );
+      if (mounted) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const MainScreen(),
+          ),
+        );
+      }
     } else {
       // Show working on process message for other roles
       _showWorkingOnProcessDialog(role);
